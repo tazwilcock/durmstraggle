@@ -1,0 +1,88 @@
+body {
+  font-size: 17px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#headerWrapper {
+  margin-bottom: 10px;
+}
+header {
+  padding: 12px $gutter 5px;
+  h1 {
+    font-size: 2rem;
+  }
+
+  div#phone {
+    display: block;
+    padding-bottom: 8px;
+    text-align: right;
+    a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: black;
+    }
+    a:hover {
+      color: #dc0073;
+    }
+  }
+}
+
+nav {
+  height: auto;
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border: none;
+    height: auto;
+    li {
+      border: none;
+      text-align: center;
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+ul li.active a {
+  background-color: #dc0073;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+}
+
+nav ul li a {
+  padding: 0.4rem 1rem;
+  text-align: center;
+}
+
+#close-x,
+#hamburger {
+  display: none;
+}
+
+#headerWrapper {
+  grid-row-start: 1;
+}
+#navWrapper {
+  grid-row-start: 2;
+}
+#mainWrapper {
+  grid-row-start: 3;
+}
+
+#footerWrapper {
+  grid-row-start: 4;
+}
+
+// THANKS PAGE STYLES
+.thanks-p {
+  max-width: 60%;
+}

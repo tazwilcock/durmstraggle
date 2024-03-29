@@ -1,0 +1,225 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  font-family: "Comfortaa", sans-serif;
+  height: 100%;
+  font-size: 15px;
+}
+
+// HEADINGS
+
+h1 {
+  font-size: 1.8rem;
+
+  margin: 0;
+  font-family: "Comfortaa", sans-serif;
+}
+
+p {
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+div#hamburger a,
+div#close-x a {
+  font-size: 27px;
+  display: block;
+  padding: 0.8rem 3.5vw;
+  text-decoration: none;
+  color: black;
+  text-align: right;
+}
+div#close-x {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+// HEADER
+
+#headerWrapper {
+  grid-row-start: 1;
+  border-bottom: 2px solid $primaryColor;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 173px auto;
+  padding: $gutter $gutter 8px;
+  align-items: center;
+  justify-content: space-between;
+
+  div#phone {
+    display: none;
+  }
+}
+
+#navWrapper {
+  grid-row-start: 4;
+}
+
+nav {
+  ul {
+    font-family: "Red Rose", serif;
+    height: 100vh;
+
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+  }
+  ul li {
+    border-top: 2px solid black;
+  }
+  li:last-child {
+    border-bottom: 2px solid black;
+  }
+  ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 0.9rem 2vw;
+    text-align: right;
+    color: black;
+  }
+  ul li a:hover {
+    color: $primaryColor;
+  }
+  ul li.active a {
+    background-color: $primaryColor;
+    color: white;
+  }
+}
+
+main {
+  padding: 0 $gutter;
+  padding-top: 30px;
+  padding-bottom: 75px;
+}
+
+#footerWrapper {
+  background-color: black;
+}
+
+footer {
+  padding: 0.7rem $gutter;
+  color: white;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+}
+
+main form {
+  background-color: rgba(234, 234, 234, 0.877);
+  padding: 10px 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+
+  h2 {
+    font-size: 0.9rem;
+    margin: 0;
+    color: $accentColor;
+    font-family: "Comfortaa", sans-serif;
+    border-bottom: solid 2px $accentColor;
+    padding-bottom: 5px;
+    width: fit-content;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+
+  label {
+    font-size: 12px;
+    padding-top: 5px;
+    display: block;
+    margin-right: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="date"],
+  input[type="password"],
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    margin: 0.1rem 0 1rem 0;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid $primaryColor;
+    outline: none;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin: 0.1rem 5px 0.4rem 0;
+  }
+
+  input:focus,
+  textarea:focus {
+    border: 2px solid $accentColor;
+  }
+
+  input:required {
+    border-left: 5px solid $accentColor;
+    border-right: 5px solid $accentColor;
+  }
+  input:required:valid {
+    border-left: 5px solid $primaryColor;
+    border-right: 5px solid $primaryColor;
+  }
+
+  input[type="submit"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  // BUTTON
+  .submitBtn {
+    border-radius: 0.375rem /* 6px */;
+    background-color: $primaryColor;
+    padding-left: 0.625rem /* 10px */;
+    padding-right: 0.625rem /* 10px */;
+    padding-top: 0.375rem /* 6px */;
+    padding-bottom: 0.375rem /* 6px */;
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.25rem /* 20px */;
+    font-weight: 600;
+    color: white;
+    display: block;
+    margin: 10px 0;
+    border: 2px solid $primaryColor;
+    max-width: 150px;
+  }
+  .submitBtn:hover {
+    background-color: darken($primaryColor, 5%);
+    border: 2px solid $accentColor;
+  }
+}
+
+// THANK YOU PAGE STYLES
+
+.thanks-p {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 500;
+  max-width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5em;
+}
